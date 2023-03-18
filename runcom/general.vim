@@ -1,7 +1,5 @@
 
 
-let leader=" "
-let localleader=" "
 filetype plugin indent on
 colorscheme torte
 
