@@ -12,7 +12,6 @@ source ~/.vim/runcom/autocmd.vim
 source ~/.vim/runcom/plug-config.vim
 
 
-
 " Plugins
 call plug#begin('~/.vim/plugged')
 
@@ -23,6 +22,8 @@ Plug 'godlygeek/tabular'
 Plug 'lervag/vimtex'
 Plug 'xuhdev/vim-latex-live-preview',{'for':'tex'}
 Plug 'neoclide/coc.nvim' , {'branch': 'release'}
+
+Plug 'hthuz/potion-vim'
 
 call plug#end()
 

@@ -15,7 +15,7 @@ augroup filetype_python
 augroup END
 
 augroup filetype_c
-    " Comments
+    " Commentj
     autocmd! 
     autocmd FileType c nnoremap <buffer> <localleader>c I// <esc>
     autocmd FileType c nnoremap <buffer> <localleader>u ^xxx<esc>
