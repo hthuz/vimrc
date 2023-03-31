@@ -82,13 +82,13 @@ Plug 'connorholyday/vim-snazzy'
 " Plug 'ycm-core/YouCompleteMe'
 Plug 'neoclide/coc.nvim' , {'branch': 'release'}
 
-Plug 'dhruvasagar/vim-table-mode'
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install_sync() }, 'for' :['markdown', 'vim-plug'] }
 Plug 'godlygeek/tabular'
+Plug 'dhruvasagar/vim-table-mode'
+Plug 'luochen1990/rainbow'
 
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install_sync() }, 'for' :['markdown', 'vim-plug'] }
 Plug 'lervag/vimtex'
 Plug 'xuhdev/vim-latex-live-preview',{'for':'tex'}
-
 Plug 'jeaye/color_coded'
 Plug 'vim-python/python-syntax'
 
@@ -148,3 +148,7 @@ endfunction
 " Python-syntax
 let g:python_highlight_indent_errors = 0
 let g:python_highlight_all = 1
+
+
+" rainbow
+let g:rainbow_active = 1
