@@ -6,7 +6,7 @@ let maplocalleader=" "
 " General
 filetype plugin indent on
 syntax enable
-set background=dark
+" set background=dark
 set number
 set wrap
 set showcmd
@@ -64,7 +64,6 @@ augroup filetype_md
     autocmd!
     autocmd FileType markdown setlocal spell spelllang=en_us  
     " Go to next header
-    autocmd FileType markdown nnoremap <buffer> <localleader>j /^## <cr>:nohlsearch<cr>
     autocmd FileType markdown nnoremap <buffer> <localleader>k ?^## <cr>:nohlsearch<cr>
 augroup END
 
@@ -78,41 +77,56 @@ augroup END
 " Plugins
 call plug#begin('~/.vim/plugged')
 
+Plug 'connorholyday/vim-snazzy'
+
 " Plug 'ycm-core/YouCompleteMe'
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install_sync() }, 'for' :['markdown', 'vim-plug'] }
+Plug 'neoclide/coc.nvim' , {'branch': 'release'}
+
 Plug 'dhruvasagar/vim-table-mode'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install_sync() }, 'for' :['markdown', 'vim-plug'] }
 Plug 'godlygeek/tabular'
+
 Plug 'lervag/vimtex'
 Plug 'xuhdev/vim-latex-live-preview',{'for':'tex'}
-Plug 'neoclide/coc.nvim' , {'branch': 'release'}
-Plug 'altercation/vim-colors-solarized'
+
+Plug 'jeaye/color_coded'
+Plug 'vim-python/python-syntax'
 
 Plug 'hthuz/potion-vim'
 
+" Plug '~/.vim/plugged/vim-polyglot'
 call plug#end()
 
 
 " Plugin Config
-let NERDTreeMapOpenSplit = ""
-nnoremap tt :NERDTree<CR>
 
+
+" Vim-snazzy
+colorscheme snazzy
+let g:SnazzyTransparent = 1
+
+" Markdwon Preview
 nnoremap <LEADER>md :MarkdownPreview<CR>
 nnoremap <LEADER>MD :MarkdownPreviewStop<CR>
 
+" Vim-table-mode
 let g:table_mode_corner='|'
  
+
+" YouCompleteMe
 " let g:ycm_enable_semantic_highlighting=1
 " let g:ycm_enable_diagnostic_highlighting=0
 " let g:ycm_always_populate_location_list=0
 " let g:ycm_complete_in_comments=1
-" let g:ycm_max_num_candidates=10
+" let g:ycm_max_num_candidates
 
+
+" Tex Preview
 nnoremap <LEADER>tp :LLPStartPreview<CR> "Tex Preview
 let g:livepreview_previewer = 'okular'
 
     
-" coc tab completion
-
+" Coc.nvim
 inoremap <silent><expr> <TAB>
      \ coc#pum#visible() ? coc#pum#next(1) :
     \ CheckBackspace() ? "\<Tab>" :
@@ -130,3 +144,8 @@ function! CheckBackspace() abort
     return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
+
+" Python-syntax
+
+let g:python_highlight_indent_errors = 0
+let g:python_highlight_all = 1
