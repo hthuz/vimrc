@@ -87,6 +87,7 @@ Plug 'dhruvasagar/vim-table-mode'
 Plug 'luochen1990/rainbow'
 
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install_sync() }, 'for' :['markdown', 'vim-plug'] }
+Plug 'preservim/vim-markdown'
 Plug 'lervag/vimtex'
 Plug 'xuhdev/vim-latex-live-preview',{'for':'tex'}
 Plug 'jeaye/color_coded'
@@ -108,6 +109,11 @@ let g:SnazzyTransparent = 1
 " Markdwon Preview
 nnoremap <LEADER>md :MarkdownPreview<CR>
 nnoremap <LEADER>MD :MarkdownPreviewStop<CR>
+
+" Vim-markdown
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_math = 1
+set conceallevel=2
 
 " Vim-table-mode
 let g:table_mode_corner='|'
