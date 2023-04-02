@@ -122,17 +122,14 @@ let g:table_mode_corner='|'
 " YouCompleteMe
 let g:ycm_enable_semantic_highlighting=1
 let g:ycm_auto_trigger=0
-let g:ycm_filetype_specific_completion_to_disable = {
-    \ '*': 1
-  \ }
 let g:ycm_filetype_whitelist = {
     \ 'c': 1,
     \ 'cpp': 1
   \ }
+
 let g:ycm_show_diagnostics_ui = 0
 let g:ycm_enable_diagnostic_signs = 0
-let g:ycm_enable_semantic_highlighting = 0
-" let g:ycm_enable_diagnostic_highlighting=0
+let g:ycm_enable_diagnostic_highlighting=0
 " let g:ycm_always_populate_location_list=0
 " let g:ycm_complete_in_comments=1
 " let g:ycm_max_num_candidates
