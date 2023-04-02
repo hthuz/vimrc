@@ -8,5 +8,12 @@
     "inlayHint.display": false,
     "pyright.inlayHints.variableTypes": false,
     "pyright.inlayHints.functionReturnTypes": false,
-    
+
+    "languageserver": {
+        "svls":{
+            "command": "svls",
+            "filetypes": ["systemverilog"]
+        }
+    }
 }
+
