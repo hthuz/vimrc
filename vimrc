@@ -35,6 +35,9 @@ inoremap <RIGHT> <nop>
 inoremap <UP> <nop>
 inoremap <DOWN> <nop>
 
+nnoremap <LOCALLEADER>pi :PlugInstall<CR>
+nnoremap <localleader>pc :PlugClean<CR>
+
 " Autocmd
 augroup filetype_general
     " Indent
@@ -78,8 +81,8 @@ augroup END
 call plug#begin('~/.vim/plugged')
 
 Plug 'connorholyday/vim-snazzy'
-
-Plug 'ycm-core/YouCompleteMe'
+   
+Plug 'ycm-core/YouCompleteMe' " python install --clangd-completer to support C only
 Plug 'neoclide/coc.nvim' , {'branch': 'release'}
 
 Plug 'godlygeek/tabular'
@@ -104,7 +107,7 @@ call plug#end()
 
 " Vim-snazzy
 colorscheme snazzy
-let g:SnazzyTransparent = 1
+" let g:SnazzyTransparent = 1
 
 " Markdwon Preview
 nnoremap <LEADER>md :MarkdownPreview<CR>
